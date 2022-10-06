@@ -10,4 +10,5 @@ rm /tmp/my_first_directory/betty : delete betty file
 rm -r /tmp/my_first_directory/ :  delete 9-firstdirdeletion
 cd .. : Write a script that
 ls -la . .. /boot :  lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format
+file /tmp/iamafile : prints the type of the file named
 
