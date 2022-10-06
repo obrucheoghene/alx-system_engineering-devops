@@ -7,5 +7,6 @@ ls -na : display current directory contents with user and groud id in long forma
 mkdir /tmp/6-firstdirectory/ : create 6-firstdirectory directory in tmp 
 mv /tmp/betty /tmp/my_first_directory : move betty from tmp/ to /tmp/my_first_directory 
 rm /tmp/my_first_directory/betty : delete betty file
-rm -r /tmp/my_first_directory/ delete 9-firstdirdeletion
+rm -r /tmp/my_first_directory/ :  delete 9-firstdirdeletion
+cd .. : Write a script that
 
