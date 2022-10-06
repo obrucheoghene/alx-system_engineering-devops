@@ -3,4 +3,5 @@ ls : distplay contents list of your current directory
 cd : change working directory to home directory
 ls -l : display current directory contents in a long format
 ls -la : display current directory contents including hidden files in long format
-ls -n : display current directory contents with user and groud id in long format
+ls -na : display current directory contents with user and groud id in long format
+
