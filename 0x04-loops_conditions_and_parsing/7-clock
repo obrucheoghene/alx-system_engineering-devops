@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Print clock
+
+hour=0
+min=0
+
+while [ "$hour" -le 12 ]
+do
+	if [ "$min" -eq 0 ]
+	then
+		echo "Hour: $hour"
+		((min++))
+	elif [ "$min" -eq 59 ]
+	then
+		echo "$min"
+		min=0
+		((hour++))
+	else
+		echo "$min"
+		((min++))
+	fi
+done
