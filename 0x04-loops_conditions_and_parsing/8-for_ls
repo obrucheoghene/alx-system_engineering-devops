@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-"Print content of the current directory"
+# Print content of the current directory"
 
 for file in *
 do
