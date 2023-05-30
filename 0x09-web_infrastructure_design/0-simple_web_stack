@@ -1,0 +1,41 @@
+## What is a server
+
+A server is a physical or virtual machine that provides functionality to other programs or devices called clients.
+
+## What is the role of the domain name
+
+The role of the domain name is to provide text based names taht is easier to memorized than numerical addresses.
+
+## What type of DNS record www is in www.foobar.com
+
+CNAME
+
+## What is the role of the web server
+
+A web server stores, processess and delivers web pages to end users
+
+## What is the role of the application server
+
+Application server is responsible for handling the business logic and generating dynamic content for user
+
+## What is the role of the database
+
+The database is used for organizing and storing application data
+
+## What is the server using to communicate with the computer of the user requesting the website
+
+It uses HTTP (Hyper Text Traansfer Protocol)
+
+## Issues are with this infrastructure:
+
+### Single Point Of Failure:
+
+The likelihood of SPOF in simple web infrastructure is high because there is no backup for the system.
+
+### Downtime when maintenance needed (like deploying new code web server needs to be restarted)
+
+During maintenance the system will be down.
+
+### Cannot scale if too much incoming traffic
+
+The simple web infrastructure can not scale.
