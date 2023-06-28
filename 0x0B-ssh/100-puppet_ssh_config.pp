@@ -1,11 +1,15 @@
-# ssh config file using puppet
+#  Config SSH config file  using Puppet
 
-file { '~/.ssh/config':
-  ensure  => file,
-  content => "Host *\n\
-              Hostname *\n\
-              User ubuntu\n\
-              IdentityFile ~/.ssh/school\n\
-              PreferredAuthentications publickey\n\
-              PasswordAuthentication no\n",
+include stdlib
+
+file_line { 'Turn off passwd auth':
+  path    => '/etc/ssh/ssh_config',
+  line    => '    PasswordAuthentication no',
+  replace => true,
+}
+
+file_line { 'Declare identity file':
+  path    => '/etc/ssh/ssh_config',
+  line    => '    IdentityFile ~/.ssh/school',
+  replace => true,
 }
