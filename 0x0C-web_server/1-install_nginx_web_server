@@ -6,7 +6,8 @@ sudo apt-get -y install nginx
 
 # starting nginx service
 sudo service nginx start
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
 
 # Restarting nginx
 sudo service nginx restart
