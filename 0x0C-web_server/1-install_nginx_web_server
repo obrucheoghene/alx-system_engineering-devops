@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# script to install nginx
+# script to install and setup nginx
 
 # Update package lists
-apt-get update
+sudo apt-get update
 
 # Install Nginx
-apt-get install -y nginx
+sudo apt-get install -y nginx
 
 # Configure Nginx
 echo "server {
@@ -16,4 +16,4 @@ echo "server {
 }" > /etc/nginx/sites-available/default
 
 # Restart Nginx
-service nginx restart
+sudo service nginx restart
