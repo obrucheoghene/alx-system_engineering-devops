@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Use a private key 
+
+if [ -z "$1" ]; then
+    echo "Usage: ./login-server <ip_address>"
+else
+    ssh -i ~/.ssh/school ubuntu@"$1"
+fi
