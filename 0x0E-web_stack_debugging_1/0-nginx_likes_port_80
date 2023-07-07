@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Using your debugging skills, find out what’s keeping your Ubuntu
+# minimum number of commands to automate your fix.
+
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart 
