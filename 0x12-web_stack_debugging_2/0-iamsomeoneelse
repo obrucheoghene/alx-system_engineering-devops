@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # check if argument was provided
-if [ -z "$1" ]; then
-    echo "Error: Enter a username name"
-    exit 1
-fi
+# if [ -z "$1" ]; then
+#     echo "Error: Enter a username name"
+#     exit 1
+# fi
 
 sudo -u "$1" whoami
