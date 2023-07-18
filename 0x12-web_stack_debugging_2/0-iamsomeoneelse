@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
-if [ -n "$1" ]; then
-    su -l "$1"
+# check if argument was provided
+if [ -z "$1" ]; then
+    echo "Error: Enter a username name"
+    exit 1
 fi
+
+# check if user exit
+if [ ! id "$1" &>/dev/null ]; then
+    echo "Error: User doesn't exist"
+    exit 1
+fi
+
+sudo -u "$1" whoami
