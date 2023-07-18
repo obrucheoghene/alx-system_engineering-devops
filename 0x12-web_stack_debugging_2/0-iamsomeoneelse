@@ -6,10 +6,4 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-# check if user exit
-if [ ! id "$1" &>/dev/null ]; then
-    echo "Error: User doesn't exist"
-    exit 1
-fi
-
 sudo -u "$1" whoami
