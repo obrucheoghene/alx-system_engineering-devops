@@ -29,3 +29,9 @@ CREATE TABLE nexus6 (
 
 -- permission for user to replicate mysql server
 GRANT REPLICATION SLAVE ON *.* TO "username"@"host"
+
+STOP SLAVE;
+CHANGE MASTER TO MASTER_HOST='web-01_ip', MASTER_USER='replication_user', MASTER_PASSWORD='obruche';
+START SLAVE;
+
+CHANGE MASTER TO MASTER_HOST='54.158.196.67', MASTER_USER='replica_user', MASTER_PASSWORD='obruche';
