@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Install and configure ufw
+
+sudo apt update
+sudo apt install ufw
+sudo ufw enable
+# dissable all traffic
+sudo ufw default deny incoming
+
+# all 22 (SSH) 80 (HTTP) 443(HTTPS)
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+
+#enable ufw to start on system boot
+sudo systemctl enable ufw
