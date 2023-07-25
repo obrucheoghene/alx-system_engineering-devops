@@ -21,17 +21,20 @@ def get_employee_todo_progress(employee_id):
         employee_id = user_data.get('id')
         employee_username = user_data.get('username')
 
-        file_name = f'{employee_id}.csv'
-        with open(file_name, 'w', encoding='UTF8') as csvfile:
-            csv_writer = csv.writer(csvfile)
+        file_name = f'{employee_id}.json'
 
-            for task in todo_data:
-                csv_writer.writerow([
-                    employee_id,
-                    employee_username,
-                    task.get('completed'),
-                    task.get('title')
-                    ])
+        tasks_json = {
+            "USER_ID": [
+                {
+                    "task": task.get('title'),
+                    "completed": task.get("completed"),
+                    "username": employee_username
+                }
+                for task in todo_data
+            ]
+        }
+        with open(file_name, 'w', encoding='UTF8') as jsonfile:
+            json.dump(tasks_json,  jsonfile)
 
     except urllib.error.URLError as e:
         print(e)
