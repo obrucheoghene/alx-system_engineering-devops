@@ -23,7 +23,6 @@ def get_employee_todo_progress(employee_id):
 
         file_name = f'{employee_id}.json'
 
-
         tasks_json = {
             employee_id: [
                 {
