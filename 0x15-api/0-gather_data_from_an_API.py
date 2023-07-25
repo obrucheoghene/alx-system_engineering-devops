@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Gather data from an API"""
-import urllib.request
-import sys
 import json
+import sys
+import urllib.request
 
 
 def get_employee_todo_progress(employee_id):
