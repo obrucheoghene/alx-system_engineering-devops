@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Gather data from an API"""
 import urllib.request
 import sys
 import json
@@ -16,16 +17,16 @@ def get_employee_todo_progress(employee_id):
         with urllib.request.urlopen(todo_url) as todo_response:
             todo_data = json.loads(todo_response.read().decode())
 
-        employee_name = user_data['name']
+        employee_name = user_data.get('name')
         total_tasks = len(todo_data)
-        done_tasks = sum(1 for task in todo_data if task['completed'])
+        done_tasks = sum(1 for task in todo_data if task.get('completed'))
 
         print("Employee {} is done with tasks({}/{}):"
               .format(employee_name, done_tasks, total_tasks))
 
         for task in todo_data:
-            if task['completed']:
-                print("\t", task['title'])
+            if task.get('completed'):
+                print("\t", task.get('title'))
 
     except urllib.error.URLError as e:
         print(e)
