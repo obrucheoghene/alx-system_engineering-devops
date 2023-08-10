@@ -7,6 +7,10 @@ import requests
 
 
 def top_ten(subreddit):
+    """
+    a function that queries the Reddit API and prints
+    the titles of the first 10 hot posts listed for a given subreddit.
+    """
 
     headers = {'User-Agent': 'CustomUserAgent'}
     url = f'https://www.reddit.com/r/{subreddit}/new.json'

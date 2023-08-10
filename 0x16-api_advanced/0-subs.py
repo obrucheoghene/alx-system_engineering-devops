@@ -8,16 +8,15 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    # Set a custom User-Agent to avoid Too Many Requests issues
+    """
+    returns the number of subscribers
+    (not active users, total subscribers) for a given subreddit.
+    """
     headers = {'User-Agent': 'CustomUserAgent'}
-
-    # Construct the URL for the subreddit's API endpoint
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
 
-    # Make the API request
     response = requests.get(url, headers=headers)
 
-    # Check if the request was successful
     if response.status_code == 200:
         try:
             data = response.json()
