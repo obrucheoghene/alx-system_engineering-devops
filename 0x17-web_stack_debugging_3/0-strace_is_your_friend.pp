@@ -1,7 +1,6 @@
-file { '/etc/apache2/apache.conf':
-  ensure => file,
-  source => 'puppet:///modules/apache/apache.conf',
-  owner  => 'root',
-  group  => 'root',
-  mode   => '0644',
+# Fixes bad `phpp` extensions to `php` in the WordPress file `wp-settings.php`.
+
+exec { 'fix-wordpress':
+  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+  path    => '/usr/local/bin/:/bin/'
 }
