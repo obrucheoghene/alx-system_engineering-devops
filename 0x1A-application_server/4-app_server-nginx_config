@@ -1,4 +1,4 @@
-# Configuration of nginx to serve dynamic route
+# Configuration of nginx to serve api route
 
 
 http {
@@ -12,6 +12,10 @@ http {
 
         location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
             proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        }
+
+        location /api {
+            proxy_pass http://127.0.0.1:5002/api;
         }
 
         error_page 400 /404.html;
